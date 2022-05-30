@@ -8,6 +8,7 @@ const RestaurantGroup = ({title, results}) => {
       <Text style={styles.title}>{title}</Text>
       <FlatList 
         horizontal
+        showsHorizontalScrollIndicator={false}
         data={results}
         keyExtractor={(item) => item.id}
         renderItem={({item}) => <ResultCard result={item} />}

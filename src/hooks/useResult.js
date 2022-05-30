@@ -11,7 +11,7 @@ export default () => {
 
   const handleSearchApi = async (searchParam) => {
     try {
-      const response = yelp.get('/search', {
+      const response = await yelp.get('/search', {
         params: {
           term: searchParam,
           location: 'san jose',
@@ -19,7 +19,7 @@ export default () => {
         }
       })
   
-      setSearchResult((await response).data.businesses)
+      setSearchResult(await response.data.businesses)
     } catch (err){
       setErrorMessage('Something went wrong.')
     }
