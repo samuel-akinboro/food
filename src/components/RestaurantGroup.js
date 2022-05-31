@@ -1,8 +1,8 @@
-import { StyleSheet, Text, View, FlatList } from 'react-native'
+import { StyleSheet, Text, View, FlatList, TouchableOpacity } from 'react-native'
 import React from 'react'
 import ResultCard from './ResultCard'
 
-const RestaurantGroup = ({title, results}) => {
+const RestaurantGroup = ({title, results, navigation}) => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>{title}</Text>
@@ -21,7 +21,7 @@ export default RestaurantGroup
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: 15
+    marginBottom: 15
   },
   title: {
     marginLeft: 15,
