@@ -4,7 +4,7 @@ import { withNavigation } from 'react-navigation'
 
 const ResultCard = ({ result, navigation }) => {
   return (
-    <TouchableOpacity onPress={()=> navigation.navigate('Result')}>
+    <TouchableOpacity onPress={()=> navigation.navigate('Result', { id: result.id })}>
       <View style={styles.container}>
         <Image 
           source={{ uri: result.image_url }} 
